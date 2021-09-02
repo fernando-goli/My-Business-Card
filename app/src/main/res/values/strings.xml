@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">My Business Card</string>
     <string name="label_my_business_card">Cartão de visita</string>
+    <string name="label_description_new_card">Novo cartão</string>
+    <string name="label_name">Name</string>
+    <string name="label_phone">Telefone</string>
+    <string name="label_email">Email</string>
+    <string name="label_business">Empresa</string>
+    <string name="label_color">Cor</string>
+    <string name="label_confirm">Confirmar</string>
+    <string name="label_share">Compartilhar</string>
 </resources>
