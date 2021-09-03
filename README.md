@@ -9,10 +9,3 @@ Aplicativo de lista de cartão de visita onde é possível manter os dados nome,
 4. LiveData
 5. ListAdapter
 6. Material Design
-
-
-## <br />Descrição
-1. Preparação do ambiente e criação do nosso App
-3. Montando layout do projeto
-5. Configuração do room database
-7. Compartilhamento de cartão de visita
