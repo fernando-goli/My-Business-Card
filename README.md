@@ -6,7 +6,7 @@ Aplicativo de lista de cartão de visita onde é possível manter os dados nome,
 
 
 ## <br />Tecnologias utilizadas
-1. Room
-2. MVVM
+1. MVVM
+2. Room
 3. LiveData
 4. Material Design
