@@ -1,4 +1,4 @@
-package com.fgomes.mybusinesscard.data
+package com.fgomes.mybusinesscard.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
