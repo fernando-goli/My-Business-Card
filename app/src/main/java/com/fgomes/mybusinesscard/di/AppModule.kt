@@ -4,10 +4,8 @@ import androidx.room.Room
 import com.fgomes.mybusinesscard.data.AppDatabase
 import com.fgomes.mybusinesscard.domain.repository.BusinessCardRepository
 import com.fgomes.mybusinesscard.domain.repository.DatabaseDataSource
-import com.fgomes.mybusinesscard.domain.usecase.CreateCardUseCase
-import com.fgomes.mybusinesscard.domain.usecase.CreateCardUseCaseImpl
-import com.fgomes.mybusinesscard.domain.usecase.GetAllCardsUseCaseImpl
-import com.fgomes.mybusinesscard.domain.usecase.GetAllCardsUsecases
+import com.fgomes.mybusinesscard.domain.usecase.*
+import com.fgomes.mybusinesscard.ui.addCard.AddBusinessCardViewModel
 import com.fgomes.mybusinesscard.ui.home.BusinessCardListViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -33,10 +31,13 @@ val repositoryModule = module {
 
 val viewModelModule = module {
     viewModel { BusinessCardListViewModel(getAllCardsUsecases = get()) }
+    viewModel { AddBusinessCardViewModel(createCardUseCase = get()) }
 }
 
 val domainModule = module {
     factory<GetAllCardsUsecases> { GetAllCardsUseCaseImpl(businessCardRepository = get()) }
     factory<CreateCardUseCase> { CreateCardUseCaseImpl(businessCardRepository = get()) }
+    factory<UpdateCardUseCase> { UpdateCardUseCaseImpl(businessCardRepository = get()) }
+    factory<DeleteCardUseCase> { DeleteCardUseCaseImpl(businessCardRepository = get()) }
 
 }
