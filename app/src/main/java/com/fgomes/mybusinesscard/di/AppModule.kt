@@ -38,7 +38,5 @@ val viewModelModule = module {
 val domainModule = module {
     factory<GetAllCardsUsecases> { GetAllCardsUseCaseImpl(businessCardRepository = get()) }
     factory<CreateCardUseCase> { CreateCardUseCaseImpl(businessCardRepository = get()) }
-    factory<GetAllCardsUsecases> { GetAllCardsUseCaseImpl(businessCardRepository = get()) }
-    factory<GetAllCardsUsecases> { GetAllCardsUseCaseImpl(businessCardRepository = get()) }
 
 }
