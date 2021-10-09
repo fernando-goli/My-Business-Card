@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/businessCardListFragment">
+    <fragment
+        android:id="@+id/businessCardListFragment"
+        android:name="com.fgomes.mybusinesscard.ui.home.BusinessCardListFragment"
+        android:label="BusinessCardListFragment"
+        tools:layout="@layout/business_card_list_fragment">
+        <action
+            android:id="@+id/action_businessCardListFragment_to_addBusinessCardFragment"
+            app:destination="@id/addBusinessCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBusinessCardFragment"
+        android:name="com.fgomes.mybusinesscard.ui.addCard.AddBusinessCardFragment"
+        android:label="add_business_card_fragment"
+        tools:layout="@layout/add_business_card_fragment" />
+</navigation>
