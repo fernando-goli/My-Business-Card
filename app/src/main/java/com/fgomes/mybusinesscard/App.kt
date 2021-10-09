@@ -1,10 +1,23 @@
 package com.fgomes.mybusinesscard
 
 import android.app.Application
-import com.fgomes.mybusinesscard.data.AppDatabase
-import com.fgomes.mybusinesscard.data.BusinessCardRepository
+import com.fgomes.mybusinesscard.di.db
+import com.fgomes.mybusinesscard.di.domainModule
+import com.fgomes.mybusinesscard.di.repositoryModule
+import com.fgomes.mybusinesscard.di.viewModelModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class App: Application() {
-    val database by lazy { AppDatabase.getDatabase(this) }
-    val repository by lazy { BusinessCardRepository(database.businessDao()) }
+    override fun onCreate() {
+        super.onCreate()
+
+        startKoin {
+            androidContext(this@App)
+            modules(viewModelModule)
+            modules(repositoryModule)
+            modules(db)
+            modules(domainModule)
+        }
+    }
 }
