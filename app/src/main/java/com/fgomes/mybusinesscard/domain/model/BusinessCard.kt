@@ -1,8 +1,11 @@
 package com.fgomes.mybusinesscard.domain.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity
 data class BusinessCard(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
@@ -11,4 +14,4 @@ data class BusinessCard(
     val business: String,
     val email: String,
     val fundo: String
-)
+) : Parcelable
