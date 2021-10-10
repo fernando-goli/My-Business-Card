@@ -17,5 +17,11 @@
         android:id="@+id/addBusinessCardFragment"
         android:name="com.fgomes.mybusinesscard.ui.addCard.AddBusinessCardFragment"
         android:label="add_business_card_fragment"
-        tools:layout="@layout/add_business_card_fragment" />
+        tools:layout="@layout/add_business_card_fragment">
+        <argument
+            android:name="businessCard"
+            app:argType="com.fgomes.mybusinesscard.domain.model.BusinessCard"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>
