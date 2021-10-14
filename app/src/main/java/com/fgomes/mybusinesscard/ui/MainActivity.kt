@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        /*navController.addOnDestinationChangedListener { _, _, _ ->
+        navController.addOnDestinationChangedListener { _, _, _ ->
             supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
-        }*/
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

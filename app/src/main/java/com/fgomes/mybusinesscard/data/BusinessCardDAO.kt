@@ -10,10 +10,10 @@ interface BusinessCardDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(businessCard: BusinessCard)
 
-    @Query("SELECT * FROM BusinessCard")
+    @Query("SELECT * FROM table_businesscard")
     fun getAll(): LiveData<List<BusinessCard>>
 
-    @Query("DELETE FROM BusinessCard WHERE id =:id")
+    @Query("DELETE FROM table_businesscard WHERE id =:id")
     suspend fun deleteById (id: Int)
 
     @Update
