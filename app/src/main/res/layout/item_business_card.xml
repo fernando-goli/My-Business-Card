@@ -9,12 +9,12 @@
         android:id="@+id/cd_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="16dp"
         android:checkable="true"
         android:clickable="true"
         android:focusable="true"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +27,16 @@
             android:layout_height="match_parent"
             android:layout_margin="16dp">
 
+            <ImageButton
+                android:id="@+id/ib_share_card"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="@+id/cv_content_card"
+                app:layout_constraintTop_toTopOf="@+id/cv_content_card"
+                app:srcCompat="@drawable/ic_share" />
+
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
@@ -34,7 +44,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Igor Rotondo Bagliotti" />
+                tools:text="Name" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_phone"
@@ -43,7 +53,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_name"
-                tools:text="Telefone" />
+                tools:text="Phone" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_email"
@@ -60,7 +70,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="Nome da Empresa" />
+                tools:text="Business" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
