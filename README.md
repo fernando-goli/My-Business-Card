@@ -12,3 +12,5 @@ Na branch koin contém modificações do projeto original.
 2. Room
 3. LiveData
 4. Material Design
+5. Navigation
+6. Koin
