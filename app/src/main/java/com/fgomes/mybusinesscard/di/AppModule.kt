@@ -31,5 +31,5 @@ val appModules = module {
     factory { DeleteCardUseCase(businessCardRepository = get()) }
 
     viewModel { BusinessCardListViewModel(get()) }
-    viewModel { AddBusinessCardViewModel(get()) }
+    viewModel { AddBusinessCardViewModel(get(), get(), get(), get()) }
 }
