@@ -9,4 +9,16 @@
     <string name="label_color">Cor</string>
     <string name="label_confirm">Confirmar</string>
     <string name="label_share">Compartilhar</string>
+    <string name="label_delete">Delete</string>
+    <string name="subscriber_deleted_successfully">Deletado</string>
+    <string name="subscriber_error_delete">Erro ao deletar</string>
+    <string name="subscriber_error_insert">Erro ao criar</string>
+    <string name="subscriber_inserted_successfully">Criado com sucesso</string>
+    <string name="subscriber_error_update">Erro ao atualizar</string>
+    <string name="subscriber_updated_sucess">Atualizado</string>
+    <string name="label_yes">Sim</string>
+    <string name="label_no">Não</string>
+    <string name="dialog_delete_msg">Deseja excluir o cartão ?</string>
+    <string name="dialog_title_delete">Excluir cartão</string>
+    <string name="update_card">Alterar Cartão</string>
 </resources>
