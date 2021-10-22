@@ -1,28 +1,12 @@
 package com.fgomes.mybusinesscard.ui.home
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.fgomes.mybusinesscard.domain.usecase.GetAllCardsUsecases
-import kotlinx.coroutines.launch
+import com.fgomes.mybusinesscard.domain.repository.BusinessCardRepository
 
-class BusinessCardListViewModel (
-    private val getAllCardsUsecases: GetAllCardsUsecases
-        ) : ViewModel() {
+class BusinessCardListViewModel(
+    private val repository: BusinessCardRepository
+) : ViewModel() {
 
-   /* fun insert(businessCard: BusinessCard){
-        getAllCardsUsecases.insert(businessCard)
-    }*/
+    val getAll = repository.getAllCards()
 
-    fun getAll() = viewModelScope.launch {
-        getAllCardsUsecases()
-    }
-
-    /*fun getAll(): LiveData<List<BusinessCard>> {
-
-        return getAllCardsUsecases.invoke()
-    }*/
-
-    /*suspend fun delete(businessCard: BusinessCard){
-        getAllCardsUsecases.delete(businessCard)
-    }*/
 }
