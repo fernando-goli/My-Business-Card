@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isNotEmpty
 import androidx.recyclerview.widget.RecyclerView
 import com.fgomes.mybusinesscard.databinding.ItemBusinessCardBinding
 import com.fgomes.mybusinesscard.domain.model.BusinessCard
@@ -43,22 +44,18 @@ class BusinessCardAdapter(
             tvEmail.text = item.email
             tvNameBusiness.text = item.business
             tvPhone.text = item.phone
-            binding.cdContent.setCardBackgroundColor(Color.parseColor(item.fundo))
-            binding.cdContent.setOnClickListener {
-                onItemClick?.invoke(item)
-            }
 
             binding.run {
                 with(cdContent){
                     setCardBackgroundColor(Color.parseColor(item.fundo))
                     setOnClickListener {
-                        onItemClick?.invoke(item)
+                        if(cdContent.isNotEmpty()) onItemClick?.invoke(item)
                     }
                 }
 
                 with(ibShareCard) {
                     setOnClickListener {
-                        listenerShare(cdContent)
+                        if(cdContent.isNotEmpty()) listenerShare(cdContent)
                     }
                 }
             }
